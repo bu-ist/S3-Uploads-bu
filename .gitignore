@@ -1,3 +1,5 @@
 .DS_Store
 .idea/
 *.phar
+
+node_modules/

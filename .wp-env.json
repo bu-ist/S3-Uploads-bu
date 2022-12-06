@@ -1,0 +1,10 @@
+{
+    "core": "WordPress/WordPress#5.4.2",
+    "plugins": ["."],
+    "config": {
+        "S3_UPLOADS_BUCKET": "my-bucket/my-folder",
+        "S3_UPLOADS_REGION": "us-east-1",
+        "S3_UPLOADS_KEY": "my-key",
+        "S3_UPLOADS_SECRET": "my-secret"
+    }
+}
