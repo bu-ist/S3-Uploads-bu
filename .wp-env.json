@@ -1,5 +1,6 @@
 {
     "core": "WordPress/WordPress#5.4.2",
+    "themes": ["bu-ist/responsive-framework"],
     "plugins": ["."],
     "config": {
         "S3_UPLOADS_BUCKET": "my-bucket/my-folder",
