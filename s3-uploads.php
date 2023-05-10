@@ -17,6 +17,3 @@ if ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
    require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 }
 
-if ( defined( 'WP_CLI' ) && WP_CLI ) {
-	WP_CLI::add_command( 's3-uploads', 'S3_Uploads\\WP_CLI_Command' );
-}
