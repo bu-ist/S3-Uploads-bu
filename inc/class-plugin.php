@@ -172,8 +172,11 @@ class Plugin {
 		$this->original_upload_dir = $dirs;
 		$s3_path = $this->get_s3_path();
 
-		$dirs['path']    = str_replace( WP_CONTENT_DIR, $s3_path, $dirs['path'] );
-		$dirs['basedir'] = str_replace( WP_CONTENT_DIR, $s3_path, $dirs['basedir'] );
+		$current_site = get_site_url();
+		$current_site = preg_replace('#^https?://#i', '', $current_site);
+
+		$dirs['path']    = str_replace( WP_CONTENT_DIR, $s3_path . '/' . $current_site , $dirs['path'] );
+		$dirs['basedir'] = str_replace( WP_CONTENT_DIR, $s3_path . '/' . $current_site , $dirs['basedir'] );
 
 		if ( ! defined( 'S3_UPLOADS_DISABLE_REPLACE_UPLOAD_URL' ) || ! S3_UPLOADS_DISABLE_REPLACE_UPLOAD_URL ) {
 
